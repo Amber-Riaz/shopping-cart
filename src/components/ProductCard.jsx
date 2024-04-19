@@ -11,10 +11,10 @@ const ProductCard = (props) => {
 
 
   return (
-    <Card>
-        <Card.Body>
-            <Card.Title>{product.title}</Card.Title>
-            <Card.Text>${product.price}</Card.Text>
+    <>
+        <div className='w-48 h-32 flex flex-col justify-center items-center bg-white rounded-lg'>
+            <div className='font-bold text-2xl pb-2'>{product.title}</div>
+            <div>${product.price}</div>
             { productQuantity > 0 ?
             <>
             <Form as={Row}>
@@ -29,9 +29,9 @@ const ProductCard = (props) => {
             :
             <Button variant='primary' onClick={()=>cart.addOneToCart(product.id)} >Add to Cart</Button>
             }
-        </Card.Body>
+        </div>
       
-    </Card>
+    </>
   );
 }
 

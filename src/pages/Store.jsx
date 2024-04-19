@@ -9,22 +9,20 @@ const Store = ({ user, handleLogout }) => {
   return (
     <div className="w-screen h-screen bg-slate-200">
       <CustomNavbar handleLogout={handleLogout} />
-      <div className="flex flex-col justify-center items-center bg-orange-200">
+      <div className="flex flex-col justify-center items-center ">
         <img
           className="w-32 h-32 rounded-full "
           src={user.picture}
           alt="userPic"
         />
         <p>Welcome, {user ? user.name : "User name"} to the Shopping cart!</p>
-        <Row xs={1} md={3} className="gap-3">
+        <Row xs={1} md={3} lg={4} className="gap-2">
           {productsArray.map((product, index)=>(
             <Col key={index} align='center'>
-           <ProductCard product={product}/>
+           <div className="mx-6"><ProductCard product={product}/></div>
           </Col>
 
           ))}
-          
-          
         </Row>
         
       </div>

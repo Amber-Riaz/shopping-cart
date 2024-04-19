@@ -36,7 +36,7 @@ const CustomNavbar = ({ handleLogout }) => {
   return (
     <>
       <Navbar expand="sm">
-        <Navbar.Brand href="/">Shopping Cart</Navbar.Brand>
+        <Navbar.Brand href="/" className="px-4">Shopping Cart</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Button onClick={handleShow}>Cart ({productsCount} items)</Button>
