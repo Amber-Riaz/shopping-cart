@@ -4,7 +4,6 @@ const Cancel = () => {
   return (
     <div>
         sorry payment is canccelled
-      
     </div>
   );
 }

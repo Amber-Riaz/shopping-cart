@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GoogleOAuthProvider, GoogleLogin, googleLogout } from "@react-oauth/google"; // Fixed import for GoogleLogout
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google"; // Fixed import for GoogleLogout
 import { jwtDecode } from "jwt-decode";
 import Store from './Store';
 
@@ -43,7 +43,6 @@ const LoginPage = ({ isAuthenticated, setIsAuthenticated }) => {
       ) : (
         <div>
           <Store user={user} handleLogout={handleLogoutSuccess}/>
-          {/* <googleLogout onSuccess={handleLogoutSuccess} /> */}
         </div>
       )}
     </div>
